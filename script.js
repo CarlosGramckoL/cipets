@@ -28,7 +28,7 @@ function updateFlip(flipCard, newNumber) {
   if (!flipCard) return;
   const topHalf = flipCard.querySelector(".top");
   const currentNumber = topHalf.textContent;
-  if (newNumber.toString() === currentNumber) return; // Evita la animación si el número no ha cambiado
+  if (newNumber.toString() === currentNumber) return; 
   flip(flipCard, newNumber);
 }
 
@@ -60,7 +60,7 @@ $(document).ready(function() {
   console.log("jQuery cargado y listo");
 
   $('#subscribe-form').on('submit', function(event) {
-      event.preventDefault(); // Evita la recarga de la página
+      event.preventDefault(); 
 
       const formData = new FormData(this);
 
@@ -72,11 +72,11 @@ $(document).ready(function() {
       .then(() => {
           let popup = $("#success-popup-subscribe");
           if (popup.length) {
-              popup.fadeIn(300); // Muestra el popup con efecto de fade
-              setTimeout(() => popup.fadeOut(300), 4000); // Oculta después de 4s
+              popup.fadeIn(300); 
+              setTimeout(() => popup.fadeOut(300), 4000); 
           }
 
-          // 🔹 Borra el campo de texto tras el envío
+          
           $('#subscribe-email').val('');
       })
       .catch(error => console.error("Error al enviar el formulario:", error));
