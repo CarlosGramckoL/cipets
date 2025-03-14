@@ -10,11 +10,11 @@ body {
   background-color: #f2f1ed;
   color: #5c5c5c;
   background-image: url(img/fondo.png);
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
-    overflow:hidden; /* Evita el scroll */
+  background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    overflow:hidden; 
 }
 
 .contenedor{
@@ -23,18 +23,17 @@ body {
     display: flex; 
     justify-content: center; 
     align-items: center;
-    padding-top: 180px; /* Añade espacio sin generar scroll */
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
-
+    padding-top: 180px; 
+    box-sizing: border-box; 
 }
 
 .logo{
   width: 300px;
   height: 300px;
-  display: flex; /* Hace que el contenedor del logo use flexbox */
+  display: flex; 
   position: absolute;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  justify-content: center; 
+  align-items: center; 
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   top: -200px;
@@ -93,11 +92,11 @@ body {
 .seccion{
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.404); /* Fondo semitransparente */
-  backdrop-filter: blur(7px); /* Difumina el fondo detrás */
-  -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
-  border-radius: 10px; /* Opcional: bordes redondeados */
-  padding: 20px; /* Espaciado interno */
+  background-color: rgba(255, 255, 255, 0.404); 
+  backdrop-filter: blur(7px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  padding: 20px; 
   box-shadow: 0 0 3px rgb(126, 126, 126);
   align-items: center;
   
@@ -214,7 +213,7 @@ body {
 @media (max-width: 768px) {
 
   .contador {
-    transform: scale(0.7); /* Reduce el tamaño del contador */
+    transform: scale(0.7); 
   }
 
   .logo {
@@ -249,7 +248,7 @@ body {
   
 
   .contador {
-    transform: scale(0.6); /* Reduce aún más el tamaño del contador */
+    transform: scale(0.6); 
   }
 }
 
@@ -257,7 +256,7 @@ body {
   
 
   .contador {
-    transform: scale(0.5); /* Reduce aún más el tamaño del contador */
+    transform: scale(0.5); /
   }
 }
 /* 📏 MÓVILES (Pantallas menores a 480px) */
@@ -298,7 +297,7 @@ body {
   }
 
   .contador {
-    transform: scale(0.4); /* Reduce aún más el tamaño del contador */
+    transform: scale(0.4); 
   }
 
   .segment-title{
@@ -307,9 +306,9 @@ body {
 }
 
 .success-popup {
-  width: auto; /* Ajuste automático al contenido */
-  min-width: 60px; /* Tamaño mínimo */
-  max-width: 280px; /* Tamaño máximo un poco mayor */
+  width: auto; 
+  min-width: 60px; 
+  max-width: 280px; 
   height: auto;
   display: none;
   position: fixed;
@@ -318,14 +317,14 @@ body {
   transform: translateX(-50%);
   background: #28a745;
   color: white;
-  padding: 6px 12px; /* Ajustado para buen espaciado */
-  border-radius: 6px; /* Bordes más suaves */
+  padding: 6px 12px; 
+  border-radius: 6px; 
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  font-size: 15px ; /* Tamaño de fuente pequeño */
-  font-weight: 500; /* Un peso medio */
+  font-size: 15px ; /
+  font-weight: 500; 
   text-align: center;
   animation: fadeInOut 4s forwards;
-  white-space: nowrap; /* Evita saltos de línea */
+  white-space: nowrap; 
 }
 
 /* Animación suave para la aparición y desaparición */
