@@ -1,0 +1,336 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+body {
+  background-color: #f2f1ed;
+  color: #5c5c5c;
+  background-image: url(img/fondo.png);
+  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    overflow:hidden; /* Evita el scroll */
+}
+
+.contenedor{
+    width: 100vw;  
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding-top: 180px; /* Añade espacio sin generar scroll */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+
+}
+
+.logo{
+  width: 300px;
+  height: 300px;
+  display: flex; /* Hace que el contenedor del logo use flexbox */
+  position: absolute;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  top: -200px;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 0 3px rgb(126, 126, 126);
+  
+}
+
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+
+.suscripcion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.suscripcion input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.suscripcion button {
+  background: #ed1b24;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.suscripcion button:hover {
+  background: #e90510;
+}
+
+.suscripcion button:active {
+  background: #f02832;
+}
+
+
+.seccion{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.404); /* Fondo semitransparente */
+  backdrop-filter: blur(7px); /* Difumina el fondo detrás */
+  -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+  border-radius: 10px; /* Opcional: bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 0 3px rgb(126, 126, 126);
+  align-items: center;
+  
+}
+
+.titulo{
+  text-align: center;
+  display: block;
+  margin-top: 50px;
+}
+
+.titulo h1{
+  font-size:50px;
+}
+
+.titulo2{
+  margin-top: 30px;
+}
+
+.titulo2 h2{
+  font-size:20px;
+}
+
+.contador{
+  display: block;
+}
+
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+  border-radius: .1em;
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: .75em;
+  line-height: 1;
+  padding: .25em;
+  overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+  background-color: #f7f7f7;
+  border-top-right-radius: .1em;
+  border-top-left-radius: .1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: .1em;
+  border-bottom-left-radius: .1em;
+}
+
+.flip-card .top-flip {
+  position: absolute;
+  width: 100%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flip-card .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.container {
+  display: flex;
+  gap: .5em;
+  justify-content: center;
+  font-size: 5.5rem;
+}
+
+.container-segment {
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
+  align-items: center;
+}
+
+.segment {
+  display: flex;
+  gap: .1em;
+}
+
+.segment-title {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+
+  .contador {
+    transform: scale(0.7); /* Reduce el tamaño del contador */
+  }
+
+  .logo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .seccion {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .titulo h1 {
+    font-size: 40px;
+  }
+
+  .titulo2 h2 {
+    font-size: 18px;
+  }
+
+  .suscripcion {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .suscripcion input,
+  .suscripcion button {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  
+
+  .contador {
+    transform: scale(0.6); /* Reduce aún más el tamaño del contador */
+  }
+}
+
+@media (max-width: 570px) {
+  
+
+  .contador {
+    transform: scale(0.5); /* Reduce aún más el tamaño del contador */
+  }
+}
+/* 📏 MÓVILES (Pantallas menores a 480px) */
+@media (max-width: 480px) {
+  .logo {
+    width: 250px;
+    height: 250px;
+    top: -170px;
+  }
+
+  .titulo h1 {
+    font-size: 30px;
+  }
+
+  .titulo2 h2 {
+    font-size: 16px;
+  }
+
+  .titulo2 {
+    margin-top: 0px;
+  }
+
+
+  .seccion {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .suscripcion {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .suscripcion input,
+  .suscripcion button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .contador {
+    transform: scale(0.4); /* Reduce aún más el tamaño del contador */
+  }
+
+  .segment-title{
+    font-size: 50px;
+  }
+}
+
+.success-popup {
+  width: auto; /* Ajuste automático al contenido */
+  min-width: 60px; /* Tamaño mínimo */
+  max-width: 280px; /* Tamaño máximo un poco mayor */
+  height: auto;
+  display: none;
+  position: fixed;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #28a745;
+  color: white;
+  padding: 6px 12px; /* Ajustado para buen espaciado */
+  border-radius: 6px; /* Bordes más suaves */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 15px ; /* Tamaño de fuente pequeño */
+  font-weight: 500; /* Un peso medio */
+  text-align: center;
+  animation: fadeInOut 4s forwards;
+  white-space: nowrap; /* Evita saltos de línea */
+}
+
+/* Animación suave para la aparición y desaparición */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  85% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
