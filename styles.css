@@ -230,6 +230,7 @@ body {
   .logo{
     width: 230px;
     height: 230px;
+    top:-155px;
   }
 
   .titulo h1 {
@@ -320,7 +321,9 @@ body {
   .titulo h1 {
     font-size: 30px;
   }
-
+  .titulo2{
+    width: 350px;
+  }
   .titulo2 h2 {
     font-size: 16px;
   }
@@ -342,8 +345,9 @@ body {
 
   .suscripcion input,
   .suscripcion button {
-    font-size: 14px;
+    font-size: 17px;
     padding: 8px;
+    width: 300px;
   }
 
   .contador {
