@@ -38,7 +38,7 @@ body {
   align-items: center; 
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
-  top: -200px;
+  top: -155px;
   border-radius: 50%;
   padding: 15px;
   box-shadow: 0 0 3px rgb(126, 126, 126);
@@ -219,6 +219,46 @@ body {
   font-size: 1rem;
 }
 
+
+@media (max-width: 1400px) {
+
+  .seccion {
+    max-width: 70%;
+    max-height: 90%;
+    padding-top: 40px;
+  }
+  .logo{
+    width: 230px;
+    height: 230px;
+  }
+
+  .titulo h1 {
+    font-size: 40px;
+  }
+  .titulo2 h2 {
+    font-size: 18px;
+  }
+
+  .contador {
+    transform: scale(0.8); 
+  }
+
+  .titulo{
+    margin-top: 0px;
+  }
+
+  .titulo2, .suscripcion{ 
+    transform: scale(0.9);
+  }
+
+  .titulo2{margin-top: 0px;}
+  
+  h1{
+    margin-bottom: 0px;
+  }
+
+  
+}
 @media (max-width: 768px) {
 
   .contador {
@@ -226,8 +266,9 @@ body {
   }
 
   .logo {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+    top: -150px;
   }
 
   .seccion {
@@ -244,13 +285,13 @@ body {
   }
 
   .suscripcion {
-    flex-direction: column;
+    flex-direction: row;
     gap: 5px;
   }
 
   .suscripcion input,
   .suscripcion button {
-    width: 100%;
+    width: 200px;
   }
 }
 @media (max-width: 650px) {
@@ -271,9 +312,9 @@ body {
 /* 📏 MÓVILES (Pantallas menores a 480px) */
 @media (max-width: 480px) {
   .logo {
-    width: 250px;
-    height: 250px;
-    top: -170px;
+    width: 200px;
+    height: 200px;
+    top: -130px;
   }
 
   .titulo h1 {
@@ -290,7 +331,7 @@ body {
 
 
   .seccion {
-    padding: 10px;
+    padding: 50px;
     max-width: 95%;
   }
 
@@ -329,7 +370,7 @@ body {
   padding: 6px 12px; 
   border-radius: 6px; 
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  font-size: 15px ; /
+  font-size: 15px ; 
   font-weight: 500; 
   text-align: center;
   animation: fadeInOut 4s forwards;
